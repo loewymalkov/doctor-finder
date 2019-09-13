@@ -19,8 +19,8 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'bulba-gochi',
-      template: './src/weather.html',
+      title: 'doctor-finder',
+      template: './src/index.html',
       inject: 'body'
     })
   ],

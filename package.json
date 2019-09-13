@@ -1,5 +1,5 @@
 {
-  "name": "weather",
+  "name": "doctor-finder",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
     "lint": "eslint src/*.js",
     "test": "node ./node_modules/karma/bin/karma start karma.conf.js"
   },
-  "author": "Loewy Malkovich, Erin Deuel",
+  "author": "Loewy Malkovich",
   "license": "MIT",
   "keywords": [],
-  "description": "weather",
+  "description": "doctor locator",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.3",
