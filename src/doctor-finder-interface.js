@@ -8,19 +8,19 @@ $(document).ready(function() {
   
 
   $('#search').click(function() {
-    const city = $('#location').val();
+    const location = $('#location').val();
     $('#location').val("");
-    const condition = $('#condition').val();
-    $('#condition').val("");
+    const symptom = $('#symptom').val();
+    $('#symptom').val("");
     const displayBy = $('#display-by').val();
     $('#display-by').val();
 
-    let searchConditions = new SearchConditions();
-    let promise = searchConditions.getConditions(conditions);
+    let searchSymptom = new SearchSymptom();
+    let promise = searchSymptom.getSymptom(symptom);
   
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('#show-doctor').text(`${city}, ${response.}`);
+      $('#show-doctor').text(`For ZIP ${location}, and your search '${symptom}' we found these practices: ${practicesForSymptom}`);
     }
   });
 });
