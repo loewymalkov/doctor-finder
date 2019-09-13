@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     let promise = new Promise(resolve, reject)
     let request = new XMLHttpRequest();
-    // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`
+    // const url = `https://api.betterdoctor.com/`
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {

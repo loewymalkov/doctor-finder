@@ -6,7 +6,7 @@ page to help find a doctor
 
 ## Description
 
-Webpage that uses the BetterDoctor API to return search results for a doctors in the area. Search can be narrowed by type, location and names. Built as a project for Epicodus. 
+Webpage that uses the BetterDoctor API to return search results for doctors in the area. Search can be narrowed by type, location and names. Built as a project for Epicodus. 
 
 ## SPECS
 
