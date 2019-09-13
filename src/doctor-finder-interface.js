@@ -3,12 +3,13 @@ import 'bootstrap';
 import './styles.css';
 
 $(document).ready(function() {
-  $('#weatherLocation').click(function() {
+  $('#search').click(function() {
     const city = $('#location').val();
     $('#location').val("");
 
+    let promise = new Promise(resolve, reject)
     let request = new XMLHttpRequest();
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`
+    // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
