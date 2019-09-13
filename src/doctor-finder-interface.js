@@ -4,6 +4,9 @@ import './styles.css';
 import { SearchConditions } from './finder.js';
 
 $(document).ready(function() {
+
+  
+
   $('#search').click(function() {
     const city = $('#location').val();
     $('#location').val("");
