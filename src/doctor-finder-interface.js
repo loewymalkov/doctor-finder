@@ -12,10 +12,12 @@ $(document).ready(function() {
     $('#location').val("");
     const symptom = $('#symptom').val();
     $('#symptom').val("");
+    const name = $('#location').val();
+    $('#name').val("");
     const displayBy = $('#display-by').val();
-    $('#display-by').val();
+    $('#display-by').val("");
 
-    let searchSymptom = new SearchSymptom();
+    let searchSymptom = new Search();
     let promise = searchSymptom.getSymptom(symptom);
   
     promise.then(function(response) {

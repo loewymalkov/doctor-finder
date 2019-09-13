@@ -1,4 +1,4 @@
-export class SearchSymptom {
+export class Search {
   getSymptom(symptom, location, displayBy) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
