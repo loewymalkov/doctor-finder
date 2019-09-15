@@ -21,7 +21,7 @@ $(document).ready(function() {
     
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('#show-doctor').html(`For ZIP ${location}, and your search '${symptom}' we found these practices: <li>${body.data[0].practices}</li>`);   
+      $('#show-doctor').html(`For ZIP ${location}, and your search '${symptom}' we found these practices: <li>${body.Doctor_list}</li>`);   
     }, function(error) {
       $('#error').text(`${error.message}`);
     });
