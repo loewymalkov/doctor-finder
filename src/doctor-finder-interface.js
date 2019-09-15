@@ -14,14 +14,22 @@ $(document).ready(function() {
     const name = $('#name').val();
     // $('#name').val("");
     const displayBy = $('#display-by').val();
+    console.log('display by value', displayBy)
     // $('#display-by').val("");
 
     let searchSymptom = new Search();
-    let promise = searchSymptom.getSymptom(symptom);
+    let promise = searchSymptom.getSymptom(symptom, displayBy);
     
     promise.then(function(response) {
-      const body = JSON.parse(response);
-      $('#show-doctor').html(`For ZIP ${location}, and your search '${symptom}' we found these practices: <li>${body.Doctor_list}</li>`);   
+      const { data } = JSON.parse(response);
+      for (let i=0; i< data.length; i++) {
+        console.log('data[i]', data[i]);
+        if (data[i].practices[0].name || data[i].profile.last_name) {
+          $('#show-doctor').append(`<li>${data[i].practices[0].name}, ${data[i].profile.last_name}</li>`)
+        } else {
+          'data incomplete';
+        }
+      }   
     }, function(error) {
       $('#error').text(`${error.message}`);
     });
